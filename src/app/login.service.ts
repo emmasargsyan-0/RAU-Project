@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {User} from "./common/types/User";
 
 @Injectable({
   providedIn: 'root'
@@ -7,15 +8,18 @@ export class LoginService {
 
   constructor() { }
 
+  private users: User[] = [];
+
   checkUser(user: User): boolean{
-    // todo
-    return true;
+    return this.users.some(u => u.login === user.login && u.password === user.password);
   }
 
-}
+  createUser(user: User): boolean {
+    if(user.login &&  user.password) {
+      this.users.push(user);
+      return true;
+    }
+    return false;
+  }
 
-
-export type User = {
-    login: string;
-    password: string;
 }

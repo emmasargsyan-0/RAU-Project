@@ -1,0 +1,15 @@
+<div style="background-color: #6dabe4; display: flex; justify-content: space-around">
+  <div style="display:table"><h1 style="display:table-cell; vertical-align:middle;">Library</h1></div>
+
+  <mat-button-toggle-group >
+    <mat-button-toggle value="left" aria-label="Text align left" [routerLink]="'../search'">
+      <span>Search Book</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="center" aria-label="Text align center" [routerLink]="'../add'">
+      <span>Add Book</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="right" aria-label="Text align right" (click)="logout()" >
+      <span>Logout</span>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

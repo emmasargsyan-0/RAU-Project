@@ -3,7 +3,7 @@
     <div class="container">
       <div class="signup-content">
         <div class="signup-form">
-          <h2 class="form-title">Log In</h2>
+          <h2 class="form-title">Sign up</h2>
           <div class="register-form" id="register-form">
             <div class="form-group">
               <input type="text" [(ngModel)]="user.login" id="login" placeholder="Username"/>
@@ -12,14 +12,14 @@
               <input type="password" [(ngModel)]="user.password" id="pass" placeholder="Password"/>
             </div>
             <h4 *ngIf="hasError" style="color: red;">{{errorMessage}}</h4>
-            <button class="form-submit" type="button" id="signup" (click)="login()">
-              Log In
+            <button class="form-submit" type="button" id="signup" (click)="register()">
+              Register
             </button>
           </div>
         </div>
         <div class="signup-image">
-          <figure><img src="../../images/login.jpg" alt="sing up image"></figure>
-          <a [routerLink]="'../signup'" class="signup-image-link">Create a account.</a>
+          <img src="../../images/login.jpg" alt="sing up image">
+          <a [routerLink]="'../login'" class="signup-image-link">I am already member</a>
         </div>
       </div>
     </div>
